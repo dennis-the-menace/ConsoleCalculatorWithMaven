@@ -29,5 +29,10 @@ public class CalculatorTest {
 	public void testSubstractionZweiPositiveIsOk() {
 		assertTrue(testee.substraktion(25, 10) == 15);
 	}
+	
+	@Test(expected=ArithmeticException.class)
+	public void testDivisionDurch0ThrowsException() {
+		assertTrue(testee.division(10, 0) == 0);
+	}
 
 }
