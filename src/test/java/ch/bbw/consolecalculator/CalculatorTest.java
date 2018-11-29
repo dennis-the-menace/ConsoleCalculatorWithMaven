@@ -31,8 +31,12 @@ public class CalculatorTest {
 	}
 	
 	@Test(expected=ArithmeticException.class)
-	public void testDivisionDurch0ThrowsException() {
+	public void testDivisionDurch0ThrowsExpectedException() {
 		assertTrue(testee.division(10, 0) == 0);
 	}
 
+	@Test
+	public void testDivisionDurch0ThrowsUnexpectedException() throws ArithmeticException{
+		assertTrue(testee.division(10, 0) == 0);
+	}
 }
