@@ -10,4 +10,16 @@ public class Calculator {
 	public int division(int value1, int value2) {
 		return value1 / value2;
 	}
+	private int privateRueckgabeAcht() {
+		return 8;
+	}
+	protected int protectedRueckgabeAcht() {
+		return 8;
+	}
+	public int publicRueckgabeAcht() {
+		return 8;
+	}
+	int packageProtectedRueckgabeAcht() {
+		return 8;
+	}
 }

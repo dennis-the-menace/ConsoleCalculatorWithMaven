@@ -39,4 +39,115 @@ public class CalculatorTest {
 	public void testDivisionDurch0ThrowsUnexpectedException() throws ArithmeticException{
 		assertTrue(testee.division(10, 0) == 0);
 	}
+	
+	@Test // --> Funktioniert nicht, da die Funktion Private ist und mir somit keinen Zugriff erlaubt. 
+	// (Deshalb ist Assert-Befehlt ausgeklammert)
+	public void testPrivateVisibility() {
+		// assertTrue(testee.privateRueckgabeAcht() == 8);
+	}
+	
+	@Test
+	public void testProtectedVisibility() {
+		assertTrue(testee.protectedRueckgabeAcht() == 8);
+	}
+	
+	@Test
+	public void testPublicVisibility() {
+		assertTrue(testee.publicRueckgabeAcht() == 8);
+	}
+	
+	@Test
+	public void testPackageProtectedVisibility() {
+		assertTrue(testee.packageProtectedRueckgabeAcht() == 8);
+	}
+	
+	/*
+	 * Aquivalenzklassen:
+	 */
+	
+	// Addition
+	@Test
+	public void additionTwoPositivNumbers() {
+		assertTrue(testee.summe(10, 25) == 35);
+	}
+	
+	@Test
+	public void additionPositiveAndNegativeNumber() {
+		assertTrue(testee.summe(-10, 25) == 15);
+	}
+	
+	@Test
+	public void additionPositiveNumberAndNumber0() {
+		assertTrue(testee.summe(10, 0) == 10);
+	}
+	
+	@Test
+	public void additionMaxAndMinValues() {
+		assertTrue(testee.summe(Integer.MAX_VALUE, Integer.MIN_VALUE) == -1);
+	}
+	
+	@Test
+	public void additionResultPositive() {
+		assertTrue(testee.summe(1, 1) > 0);
+	}
+	
+	@Test
+	public void additionResultNegative() {
+		assertTrue(testee.summe(-1, -1) < 0);
+	}
+	
+	@Test
+	public void additionResultIs0() {
+		assertTrue(testee.summe(-1, 1) == 0);
+	}
+	
+	@Test
+	public void additionResultisMaxValue() {
+		assertTrue(testee.summe(Integer.MAX_VALUE, 0) == Integer.MAX_VALUE);
+	}
+	
+	// Subraktion
+	
+	@Test
+	public void subractionTwoPositivNumbers() {
+		assertTrue(testee.substraktion(10, 25) == -15);
+	}
+	
+	@Test
+	public void subractionPositiveAndNegativeNumber() {
+		assertTrue(testee.substraktion(-10, 25) == -35);
+	}
+	
+	@Test
+	public void subractionPositiveNumberAndNumber0() {
+		assertTrue(testee.substraktion(10, 0) == 10);
+	}
+	
+	@Test
+	public void subractionMaxAndMinValues() {
+		assertTrue(testee.substraktion(Integer.MAX_VALUE, Integer.MIN_VALUE) == -1);
+	}
+	
+	@Test
+	public void subractionResultPositive() {
+		assertTrue(testee.substraktion(2, 1) > 0);
+	}
+	
+	@Test
+	public void subractionResultNegative() {
+		assertTrue(testee.substraktion(2, 3) < 0);
+	}
+	
+	@Test
+	public void subractionResultIs0() {
+		assertTrue(testee.substraktion(1, 1) == 0);
+	}
+	
+	@Test
+	public void subractionResultisMaxValue() {
+		assertTrue(testee.substraktion(Integer.MAX_VALUE, 0) == Integer.MAX_VALUE);
+	}
+	
+	// Division
+
 }
