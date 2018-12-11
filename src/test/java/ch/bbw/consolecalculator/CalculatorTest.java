@@ -109,45 +109,83 @@ public class CalculatorTest {
 	// Subraktion
 	
 	@Test
-	public void subractionTwoPositivNumbers() {
+	public void subtractionTwoPositivNumbers() {
 		assertTrue(testee.substraktion(10, 25) == -15);
 	}
 	
 	@Test
-	public void subractionPositiveAndNegativeNumber() {
+	public void subtractionPositiveAndNegativeNumber() {
 		assertTrue(testee.substraktion(-10, 25) == -35);
 	}
 	
 	@Test
-	public void subractionPositiveNumberAndNumber0() {
+	public void subtractionPositiveNumberAndNumber0() {
 		assertTrue(testee.substraktion(10, 0) == 10);
 	}
 	
 	@Test
-	public void subractionMaxAndMinValues() {
+	public void subtractionMaxAndMinValues() {
 		assertTrue(testee.substraktion(Integer.MAX_VALUE, Integer.MIN_VALUE) == -1);
 	}
 	
 	@Test
-	public void subractionResultPositive() {
+	public void subtractionResultPositive() {
 		assertTrue(testee.substraktion(2, 1) > 0);
 	}
 	
 	@Test
-	public void subractionResultNegative() {
+	public void subtractionResultNegative() {
 		assertTrue(testee.substraktion(2, 3) < 0);
 	}
 	
 	@Test
-	public void subractionResultIs0() {
+	public void subtractionResultIs0() {
 		assertTrue(testee.substraktion(1, 1) == 0);
 	}
 	
 	@Test
-	public void subractionResultisMaxValue() {
+	public void subtractionResultisMaxValue() {
 		assertTrue(testee.substraktion(Integer.MAX_VALUE, 0) == Integer.MAX_VALUE);
 	}
 	
 	// Division
-
+	@Test
+	public void divideTwoPositivNumbers() {
+		assertTrue(testee.division(10, 5) == 2);
+	}
+	
+	@Test
+	public void dividePositiveAndNegativeNumber() {
+		assertTrue(testee.division(-10, 5) == -2);
+	}
+	
+	@Test
+	public void divideNumber0AndPositiveNumber() {
+		assertTrue(testee.division(0, 10) == 0);
+	}
+	
+	@Test
+	public void divideMinAndMaxValues() {
+		assertTrue(testee.division(Integer.MIN_VALUE, Integer.MAX_VALUE) == -1);
+	}
+	
+	@Test
+	public void divideResultPositive() {
+		assertTrue(testee.division(2, 1) > 0);
+	}
+	
+	@Test
+	public void divideResultNegative() {
+		assertTrue(testee.division(-2, 1) < 0);
+	}
+	
+	@Test
+	public void divideResultIs0() {
+		assertTrue(testee.division(0, 10) == 0);
+	}
+	
+	@Test
+	public void divideResultisMaxValue() {
+		assertTrue(testee.division(Integer.MAX_VALUE, 1) == Integer.MAX_VALUE);
+	}
 }
