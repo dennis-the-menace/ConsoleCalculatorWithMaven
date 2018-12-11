@@ -20,5 +20,6 @@ public class App
         valueA = 10;
         valueB = 20;
         System.out.println("Summe " + valueA + " + " + valueB + " = " + calculator.summe(10, 20));
+        //System.out.println("test: " + Integer.MIN_VALUE + "  test  " +  Integer.MAX_VALUE);
     }
 }
