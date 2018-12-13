@@ -106,6 +106,16 @@ public class CalculatorTest {
 		assertTrue(testee.summe(Integer.MAX_VALUE, 0) == Integer.MAX_VALUE);
 	}
 	
+	@Test
+    public void additionResultOverflowValueToBig() {
+        assertTrue(testee.summe(Integer.MAX_VALUE, 12) == Integer.MIN_VALUE + 11);
+    }
+
+    @Test
+    public void additionResultUnderflowValueToSmall() {
+        assertTrue(testee.summe(Integer.MIN_VALUE, -12) == Integer.MAX_VALUE - 11);
+    }
+	
 	// Subraktion
 	
 	@Test
