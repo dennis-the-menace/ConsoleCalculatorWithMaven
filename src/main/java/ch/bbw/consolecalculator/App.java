@@ -8,7 +8,6 @@ public class App
 {
     public static void main( String[] args )
     {
-    	System.out.println(Integer.MAX_VALUE-Integer.MIN_VALUE);
         Calculator calculator = new Calculator();
         int valueA = 0;
         int valueB = 0;
