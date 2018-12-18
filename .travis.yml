@@ -9,3 +9,4 @@ deploy:
   on:
     repo: dennis-the-menace/ConsoleCalculatorWithMaven
     branch: master
+    tags: true
