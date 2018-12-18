@@ -7,6 +7,7 @@ deploy:
     secure: Joc/h3wqVTST8G0QApfdztV7+UHIA/1o3qGS6BOr4fkHCNqb491bwtXYuUjwqLUPaQMvCSZ8yabVK50frUg4XuSYTXmNobPuBGjxEWTN9e08repga8szNWLXzi3S7cNZNDWJ2eNuxfwUnEallCL1DIy4ubrz1JBTsjqdzwfRi7MLSzNRidl642MuzorAY7zG2kHBRZVDPOqcmEogRfbUJ8S4O6qUWWt9/2ksiOG37pY78COeEQ4o2pxflioahmRj8oGqcDybBVwdceVBC/Cd9+0FiScw2JZLCNJZr7Kbw9if2bcq0Psx4tlu/Az7qYhzBeEthcIdQWZilGuE6JPRSj7c4kpluUS7Sv3LUoaTgLF9wyogI10MbA2iyMuH2WbvK0OIwz0ziDPmLi1RAd4rQJrM+R3U6D/W8oWo/f9gaBCBBKB9eAhi4PPCRck+wIcfiUSSSk3jpeekEgBD4U9PrSgKsq3A5IhSM0MiBYdbcU+r4ULBbjkArOh6vs8UE9etJAh72kGKPNUdFe1qomMSM4NDOb9ZCqRFELMACsighKayJ7E4f1+oblSGLNVksE38R0BBEYzB2JXrjj7/5RRvzkQ/GKv80A6ZxMq2ha+9qEDpZqKuk2bFnDha9ddgY5osSwga2lSvvF/WA9EUNSZwbXQwKhcwiAMiFGxGgL9B84g=
   file: "/home/travis/.m2/repository/ch/bbw/ConsoleCalculatorWithMaven/0.0.1-SNAPSHOT/ConsoleCalculatorWithMaven-0.0.1-SNAPSHOT.jar"
   on:
+    tags: true
     repo: dennis-the-menace/ConsoleCalculatorWithMaven
     branch: master
-    tags: true
+    
